@@ -1,0 +1,30 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+#include "cststrutil/cststrutil.h"
+#include "tests/tests.h"
+
+void newLine();
+
+int main()
+{
+    testAll();
+
+    printf("Test 1: substring with extractStr()\n");
+    char str1[] = "aLongString";
+    char str2[4];
+    extractStr(str2, str1, 1, 4);
+    printf("Original string: %s", str1);
+    newLine();
+    printf("Extracted string: %s", str2);
+    newLine();
+
+    printf("Test 2: concatenating an integer\n");
+
+    return 0;
+}
+
+void newLine()
+{
+    printf("\n");
+}
