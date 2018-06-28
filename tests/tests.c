@@ -12,9 +12,9 @@ void testAll()
 
 void concatIntTest()
 {
-    char intStr1[] = "";
+    char intStr1[] = "num";
     concatInt(intStr1, 3, 10);
-    assert(strcmp(intStr1, "3") == 0);
+    assert(strcmp(intStr1, "num3") == 0);
 
     char intStr2[] = "num";
     concatInt(intStr2, 3, 2);
