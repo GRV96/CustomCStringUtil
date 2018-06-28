@@ -21,7 +21,16 @@ int main()
     newLine();
 
     printf("Test 2: trimming the end of a string\n");
-    char toTrim[20] = "Bonjour";
+    char toTrim[20];
+    toTrim[0] = 'B';
+    toTrim[1] = 'o';
+    toTrim[2] = 'n';
+    toTrim[3] = 'j';
+    toTrim[4] = 'o';
+    toTrim[5] = 'u';
+    toTrim[6] = 'r';
+    toTrim[12] = 'x';
+    toTrim[19] = '\0';
     char* trimmed = trimStrEnd(toTrim);
     printf("Original string: %s.", toTrim);
     newLine();
