@@ -8,7 +8,7 @@ void newLine();
 
 int main()
 {
-    testAll();
+    //testAll();
 
     printf("Test 1: substring with extractStr()\n");
     char str1[] = "aLongString";
@@ -18,8 +18,15 @@ int main()
     newLine();
     printf("Extracted string: %s", str2);
     newLine();
+    newLine();
 
-    printf("Test 2: concatenating an integer\n");
+    printf("Test 2: trimming the end of a string\n");
+    char toTrim[20] = "Bonjour";
+    char* trimmed = trimStrEnd(toTrim);
+    printf("Original string: %s", toTrim);
+    newLine();
+    printf("Trimmed string: %s", trimmed);
+    newLine();
 
     return 0;
 }

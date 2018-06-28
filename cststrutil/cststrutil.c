@@ -4,13 +4,13 @@
 
 #define DIGITS_IN_INT 5
 
-#include "cststrutil/cststrutil.h"
+#include "cststrutil.h"
 
 void concatInt(char str[], int integer, unsigned int base)
 {
     char intString[DIGITS_IN_INT+1];
     itoa(integer, intString, base);
-    strcat(str, trimStr(intString));
+    strcat(str, trimStrEnd(intString));
 }
 
 void extractStr(char receiver[], const char source[], unsigned int position, unsigned int length)
@@ -24,7 +24,7 @@ void extractStr(char receiver[], const char source[], unsigned int position, uns
     receiver[length] = '\0';
 }
 
-char* trimStr(const char str[])
+char* trimStrEnd(const char str[])
 {
     unsigned int charNum = strlen(str);
     char trimmed[charNum+1];
