@@ -3,6 +3,8 @@
 
 void testAll();
 
+void concatDoubleTest();
+
 void concatIntTest();
 
 void extractStrTest();

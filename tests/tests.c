@@ -5,19 +5,31 @@
 
 void testAll()
 {
+    concatDoubleTest();
     concatIntTest();
     extractStrTest();
+}
+
+void concatDoubleTest()
+{
+    char dblStr1[] = "num";
+    concatDouble(dblStr1, 23.19);
+    //assert(strcmp(dblStr1, "num23.190000") == 0);
+
+    char dblStr2[] = "num";
+    concatDouble(dblStr2, 92617.235801643);
+    //assert(strcmp(dblStr2, "num92617.235801643") > 0);
 }
 
 void concatIntTest()
 {
     char intStr1[] = "num";
-    concatInt(intStr1, 3, 10);
-    assert(strcmp(intStr1, "num3") == 0);
+    concatInt(intStr1, 48127, 10);
+    assert(strcmp(intStr1, "num48127") == 0);
 
     char intStr2[] = "num";
-    concatInt(intStr2, 3, 2);
-    assert(strcmp(intStr2, "num11") == 0);
+    concatInt(intStr2, 34, 2);
+    assert(strcmp(intStr2, "num100010") == 0);
 
     char intStr3[] = "num";
     concatInt(intStr3, 12, 8);

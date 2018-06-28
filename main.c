@@ -22,14 +22,14 @@ int main()
 
     printf("Test 2.1: concatenating an integer, base 10\n");
     char intStr1[] = "num";
-    concatInt(intStr1, 3, 10);
+    concatInt(intStr1, 48127, 10);
     printf("Number string: %s.", intStr1);
     newLine();
     newLine();
 
     printf("Test 2.2: concatenating an integer, base 2\n");
     char intStr2[] = "num";
-    concatInt(intStr2, 3, 2);
+    concatInt(intStr2, 34, 2);
     printf("Number string: %s.", intStr2);
     newLine();
     newLine();
@@ -45,6 +45,20 @@ int main()
     char intStr4[] = "num";
     concatInt(intStr4, 29, 16);
     printf("Number string: %s.", intStr4);
+    newLine();
+    newLine();
+
+    printf("Test 3.1: concatenating a double\n");
+    char dblStr1[] = "num";
+    concatDouble(dblStr1, 23.19);
+    printf("Number string: %s.", dblStr1);
+    newLine();
+    newLine();
+
+    printf("Test 3.2: concatenating a double with too many digits\n");
+    char dblStr2[] = "num";
+    concatDouble(dblStr2, 92617.235801643);
+    printf("Number string: %s.", dblStr2);
     newLine();
     newLine();
 

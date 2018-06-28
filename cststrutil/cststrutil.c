@@ -1,10 +1,16 @@
-#include <stdio.h>
-#include <stdlib.h>
+#include <float.h>
 #include <string.h>
 
 #define DIGITS_IN_INT 5
 
 #include "cststrutil.h"
+
+void concatDouble(char* str, double dbl)
+{
+    char dblString[DBL_DIG]; // DBL_DIG from float.h = 15
+    sprintf(dblString, "%f", dbl);
+    strcat(str, dblString);
+}
 
 void concatInt(char* str, int integer, unsigned int base)
 {
