@@ -7,7 +7,6 @@ void testAll()
 {
     concatIntTest();
     extractStrTest();
-    //trimTest();
 }
 
 void concatIntTest()

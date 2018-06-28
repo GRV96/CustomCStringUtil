@@ -7,6 +7,4 @@ void concatIntTest();
 
 void extractStrTest();
 
-void trimTest();
-
 #endif // TESTS_H_INCLUDED

@@ -32,17 +32,3 @@ void extractStr(char* receiver, const char* source, unsigned int position, unsig
 
     receiver[i] = '\0';
 }
-
-char* trimStrEnd(const char* str)
-{
-    unsigned int charNum = strlen(str);
-    char trimmed[charNum+1];
-
-    for(unsigned int i=0; i<charNum; i++)
-    {
-        trimmed[i] = str[i];
-    }
-    trimmed[charNum] = '\0';
-
-    return trimmed;
-}
