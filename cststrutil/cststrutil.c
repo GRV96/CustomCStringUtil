@@ -16,9 +16,10 @@ void concatInt(char* str, int integer, unsigned int base)
 
 void extractStr(char* receiver, const char* source, unsigned int position, unsigned int length)
 {
+    unsigned int i;
     char currentInput;
 
-    for(unsigned int i=0; i<length; i++)
+    for(i=0; i<length; i++)
     {
         currentInput = source[position];
         receiver[i] = currentInput;
@@ -30,7 +31,7 @@ void extractStr(char* receiver, const char* source, unsigned int position, unsig
         }
     }
 
-    receiver[length] = '\0';
+    receiver[i] = '\0';
 }
 
 char* trimStrEnd(const char* str)
