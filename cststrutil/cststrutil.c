@@ -6,19 +6,27 @@
 
 #include "cststrutil.h"
 
-void concatInt(char str[], int integer, unsigned int base)
+void concatInt(char* str, int integer, unsigned int base)
 {
     char intString[DIGITS_IN_INT+1];
     itoa(integer, intString, base);
     strcat(str, trimStrEnd(intString));
 }
 
-void extractStr(char receiver[], const char source[], unsigned int position, unsigned int length)
+void extractStr(char* receiver, const char* source, unsigned int position, unsigned int length)
 {
+    char currentInput;
+
     for(unsigned int i=0; i<length; i++)
     {
-        receiver[i] = source[position];
+        currentInput = source[position];
+        receiver[i] = currentInput;
         position++;
+
+        if(currentInput == '\0')
+        {
+            break;
+        }
     }
 
     receiver[length] = '\0';
