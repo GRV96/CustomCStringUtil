@@ -12,7 +12,9 @@ void testAll()
 
 void concatIntTest()
 {
-    //
+    char numStr[] = "";
+    concatInt(numStr, 3, 10);
+    assert(strcmp(numStr, "3") == 0);
 }
 
 void extractStrTest()

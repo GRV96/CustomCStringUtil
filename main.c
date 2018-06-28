@@ -27,6 +27,14 @@ int main()
     newLine();
     printf("Trimmed string: %s.", trimmed);
     newLine();
+    newLine();
+
+    printf("Test 3: concatenating an integer\n");
+    char numStr[] = "num";
+    concatInt(numStr, 3, 10);
+    printf("Number string: %s.", numStr);
+    newLine();
+    newLine();
 
     return 0;
 }

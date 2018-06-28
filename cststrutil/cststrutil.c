@@ -10,7 +10,8 @@ void concatInt(char* str, int integer, unsigned int base)
 {
     char intString[DIGITS_IN_INT+1];
     itoa(integer, intString, base);
-    strcat(str, trimStrEnd(intString));
+    //strcat(str, trimStrEnd(intString));
+    strcat(str, intString);
 }
 
 void extractStr(char* receiver, const char* source, unsigned int position, unsigned int length)
@@ -32,7 +33,7 @@ void extractStr(char* receiver, const char* source, unsigned int position, unsig
     receiver[length] = '\0';
 }
 
-char* trimStrEnd(const char str[])
+char* trimStrEnd(const char* str)
 {
     unsigned int charNum = strlen(str);
     char trimmed[charNum+1];
