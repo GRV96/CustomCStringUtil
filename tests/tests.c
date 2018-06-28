@@ -12,9 +12,21 @@ void testAll()
 
 void concatIntTest()
 {
-    char numStr[] = "";
-    concatInt(numStr, 3, 10);
-    assert(strcmp(numStr, "3") == 0);
+    char intStr1[] = "";
+    concatInt(intStr1, 3, 10);
+    assert(strcmp(intStr1, "3") == 0);
+
+    char intStr2[] = "num";
+    concatInt(intStr2, 3, 2);
+    assert(strcmp(intStr2, "num11") == 0);
+
+    char intStr3[] = "num";
+    concatInt(intStr3, 12, 8);
+    assert(strcmp(intStr3, "num14") == 0);
+
+    char intStr4[] = "num";
+    concatInt(intStr4, 29, 16);
+    assert(strcmp(intStr4, "num1d") == 0);
 }
 
 void extractStrTest()
@@ -25,11 +37,4 @@ void extractStrTest()
 
     assert(strcmp(str1, "aLongString") == 0);
     assert(strcmp(str2, "Long") == 0);
-}
-
-void trimTest()
-{
-    char toTrim[20] = "Bonjour";
-    char* trimmed = trimStrEnd(toTrim);
-    assert(strcmp(trimmed, "Bonjour") == 0);
 }

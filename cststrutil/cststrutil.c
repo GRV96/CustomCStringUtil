@@ -10,7 +10,6 @@ void concatInt(char* str, int integer, unsigned int base)
 {
     char intString[DIGITS_IN_INT+1];
     itoa(integer, intString, base);
-    //strcat(str, trimStrEnd(intString));
     strcat(str, intString);
 }
 
