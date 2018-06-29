@@ -5,7 +5,7 @@
 
 void testAll()
 {
-    concatDoubleTest();
+    //concatDoubleTest();
     concatIntTest();
     extractStrTest();
 }

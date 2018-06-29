@@ -65,20 +65,21 @@ int main()
     printf("Test 4.1: removing characters from a string\n");
     char preRemoval1[] = "0123456";
     char postRemoval1[4];
+    //char* postRemoval1;
     removeChars(postRemoval1, preRemoval1, 2, 5);
     printf("Original string: %s.", preRemoval1);
     newLine();
-    printf("After removal of indexes 2 to 4: %s.", postRemoval1);
+    printf("After removal of indices 2 to 4: %s.", postRemoval1);
     newLine();
     newLine();
 
-    printf("Test 4.2: removing characters with inverted indexes\n");
-    //char postRemoval2[4];
-    char* postRemoval2;
+    printf("Test 4.2: removing characters with inverted indices\n");
+    char postRemoval2[4];
+    //char* postRemoval2;
     removeChars(postRemoval2, preRemoval1, 5, 2);
     printf("Original string: %s.", preRemoval1);
     newLine();
-    printf("After removal of indexes 2 to 4: %s.", postRemoval2);
+    printf("After removal of indices 2 to 4: %s.", postRemoval2);
     newLine();
     newLine();
 
@@ -88,7 +89,7 @@ int main()
     removeChars(postRemoval3, preRemoval1, 0, 7);
     printf("Original string: %s.", preRemoval1);
     newLine();
-    printf("After removal of indexes 0 to 6: %s.", postRemoval3);
+    printf("After removal of indices 0 to 6: %s.", postRemoval3);
     newLine();
     newLine();
 
@@ -98,18 +99,32 @@ int main()
     removeChars(postRemoval4, preRemoval1, 3, 13);
     printf("Original string: %s.", preRemoval1);
     newLine();
-    printf("After removal of indexes 3 to 12: %s.", postRemoval4);
+    printf("After removal of indices 3 to 12: %s.", postRemoval4);
     newLine();
     newLine();
 
     printf("Test 4.5: removal with start index beyond the limit\n");
     //char postRemoval5[4];
-    char* postRemoval5;
+    //char postRemoval5[6];
+    char postRemoval5[10];
+    //char postRemoval5[20];
+    //char* postRemoval5;
     removeChars(postRemoval5, preRemoval1, 12, 18);
     printf("Original string: %s.", preRemoval1);
     newLine();
-    printf("After removal of indexes 12 to 17: %s.", postRemoval5);
+    printf("After removal of indices 12 to 17: %s.", postRemoval5);
     newLine();
+    newLine();
+
+    /*/ Based on https://openclassrooms.com/courses/19980-apprenez-a-programmer-en-c/15765-les-chaines-de-caracteres
+    printf("Char* test\n");
+    char chaine[] = "Texte";
+    char copie[100] = {0};
+    //char* copie;
+    strcpy(copie, chaine); // On copie "chaine" dans "copie"
+    printf("chaine vaut: %s\n", chaine);
+    printf("copie vaut: %s\n", copie);
+    //*/
 
     return 0;
 }
