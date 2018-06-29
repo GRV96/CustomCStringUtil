@@ -1,4 +1,5 @@
 #include <float.h>
+#include <stdio.h>
 #include <string.h>
 
 #define DIGITS_IN_INT 5
@@ -22,19 +23,56 @@ void concatInt(char* str, int integer, unsigned int base)
 void extractStr(char* receiver, const char* source, unsigned int position, unsigned int length)
 {
     unsigned int i;
-    char currentInput;
+    char currentInputChar;
 
     for(i=0; i<length; i++)
     {
-        currentInput = source[position];
-        receiver[i] = currentInput;
+        currentInputChar = source[position];
+        receiver[i] = currentInputChar;
         position++;
 
-        if(currentInput == '\0')
+        if(currentInputChar == '\0')
         {
             break;
         }
     }
 
     receiver[i] = '\0';
+}
+
+void removeChars(char* outputStr, const char* inputStr, unsigned int startIndex, unsigned int endIndex)
+{
+    unsigned int inputLength = strlen(inputStr);
+
+    if(endIndex<startIndex || startIndex>=inputLength)
+    {
+        outputStr = NULL;
+        return;
+    }
+
+    if(endIndex>inputLength)
+    {
+        endIndex = inputLength;
+    }
+
+    unsigned int outputLength = inputLength-(endIndex-startIndex)+1;
+
+    if(outputLength==0)
+    {
+        outputStr = "";
+        return;
+    }
+
+    unsigned int index = 0; // An index to fill the output string
+
+    for(unsigned int i=0; i<inputLength; i++)
+    {
+        if(i<startIndex || i>=endIndex)
+        {
+            outputStr[index] = inputStr[i];
+            index++;
+        }
+    }
+
+    outputStr[index] = '\0';
 }

@@ -62,6 +62,55 @@ int main()
     newLine();
     newLine();
 
+    printf("Test 4.1: removing characters from a string\n");
+    char preRemoval1[] = "0123456";
+    char postRemoval1[4];
+    removeChars(postRemoval1, preRemoval1, 2, 5);
+    printf("Original string: %s.", preRemoval1);
+    newLine();
+    printf("After removal of indexes 2 to 4: %s.", postRemoval1);
+    newLine();
+    newLine();
+
+    printf("Test 4.2: removing characters with inverted indexes\n");
+    //char postRemoval2[4];
+    char* postRemoval2;
+    removeChars(postRemoval2, preRemoval1, 5, 2);
+    printf("Original string: %s.", preRemoval1);
+    newLine();
+    printf("After removal of indexes 2 to 4: %s.", postRemoval2);
+    newLine();
+    newLine();
+
+    printf("Test 4.3: removing all characters\n");
+    char postRemoval3[4];
+    //char* postRemoval3 = NULL;
+    removeChars(postRemoval3, preRemoval1, 0, 7);
+    printf("Original string: %s.", preRemoval1);
+    newLine();
+    printf("After removal of indexes 0 to 6: %s.", postRemoval3);
+    newLine();
+    newLine();
+
+    printf("Test 4.4: removal with end index beyond the limit\n");
+    char postRemoval4[4];
+    //char* postRemoval4 = NULL;
+    removeChars(postRemoval4, preRemoval1, 3, 13);
+    printf("Original string: %s.", preRemoval1);
+    newLine();
+    printf("After removal of indexes 3 to 12: %s.", postRemoval4);
+    newLine();
+    newLine();
+
+    printf("Test 4.5: removal with start index beyond the limit\n");
+    //char postRemoval5[4];
+    char* postRemoval5;
+    removeChars(postRemoval5, preRemoval1, 12, 18);
+    printf("Original string: %s.", preRemoval1);
+    newLine();
+    printf("After removal of indexes 12 to 17: %s.", postRemoval5);
+    newLine();
+
     return 0;
 }
 
