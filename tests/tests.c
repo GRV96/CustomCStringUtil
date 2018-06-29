@@ -7,6 +7,7 @@ void testAll()
 {
     //concatDoubleTest();
     concatIntTest();
+    emptyingTest();
     extractStrTest();
 }
 
@@ -38,6 +39,13 @@ void concatIntTest()
     char intStr4[] = "num";
     concatInt(intStr4, 29, 16);
     assert(strcmp(intStr4, "num1d") == 0);
+}
+
+void emptyingTest()
+{
+    char toBeEmptied[] = "toBeEmptied";
+    makeEmpty(toBeEmptied);
+    assert(strcmp(toBeEmptied, "") == 0);
 }
 
 void extractStrTest()

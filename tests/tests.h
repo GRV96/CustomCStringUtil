@@ -7,6 +7,8 @@ void concatDoubleTest();
 
 void concatIntTest();
 
+void emptyingTest();
+
 void extractStrTest();
 
 #endif // TESTS_H_INCLUDED
