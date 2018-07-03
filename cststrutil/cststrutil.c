@@ -8,7 +8,7 @@
 
 void concatDouble(char* str, double dbl)
 {
-    char dblString[DBL_DIG]; // DBL_DIG from float.h = 15
+    char dblString[DBL_DIG+1]; // DBL_DIG from float.h = 15
     sprintf(dblString, "%f", dbl);
     strcat(str, dblString);
 }
