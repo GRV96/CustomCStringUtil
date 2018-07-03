@@ -39,6 +39,16 @@ void concatIntTest()
     char intStr4[] = "num";
     concatInt(intStr4, 29, 16);
     assert(strcmp(intStr4, "num1d") == 0);
+
+    char intStr5[] = "num";
+    char c5 = 109;
+    concatInt(intStr5, c5, 10);
+    assert(strcmp(intStr5, "num109") == 0);
+
+    char intStr6[] = "num";
+    unsigned char uc6 = 147;
+    concatInt(intStr6, uc6, 10);
+    assert(strcmp(intStr6, "num147") == 0);
 }
 
 void emptyingTest()

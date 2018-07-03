@@ -116,6 +116,8 @@ int main()
     newLine();
     newLine();
 
+    printf("Tests finished\n");
+
     /*/ Based on https://openclassrooms.com/courses/19980-apprenez-a-programmer-en-c/15765-les-chaines-de-caracteres
     printf("Char* test\n");
     char chaine[] = "Texte";
