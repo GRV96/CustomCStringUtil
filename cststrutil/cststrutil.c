@@ -6,10 +6,23 @@
 
 #include "cststrutil.h"
 
-void concatDouble(char* str, double dbl)
+void concatDouble(char* str, double dbl, unsigned char precision)
 {
+    double toConcat = dbl * pow(10.0, precision);
+    toConcat = round(toConcat);
+    toConcat /= pow(10.0, precision);
+
     char dblString[DBL_DIG+1]; // DBL_DIG from float.h = 15
-    sprintf(dblString, "%f", dbl);
+    sprintf(dblString, "%f", toConcat);
+
+    char* pointPointer = strchr(dblString, '.');
+    unsigned char ppLengt = strlen(pointPointer);
+
+    if(precision < ppLengt)
+    {
+        pointPointer[precision+1] = '\0';
+    }
+
     strcat(str, dblString);
 }
 

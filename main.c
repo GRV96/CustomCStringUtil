@@ -50,14 +50,14 @@ int main()
 
     printf("Test 3.1: concatenating a double\n");
     char dblStr1[] = "num";
-    concatDouble(dblStr1, 23.19);
+    concatDouble(dblStr1, 23.19, 4);
     printf("Number string: %s.", dblStr1);
     newLine();
     newLine();
 
     printf("Test 3.2: concatenating a double with too many digits\n");
     char dblStr2[] = "num";
-    concatDouble(dblStr2, 92617.235801643);
+    concatDouble(dblStr2, 92617.235801643, 3);
     printf("Number string: %s.", dblStr2);
     newLine();
     newLine();

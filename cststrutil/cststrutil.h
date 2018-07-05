@@ -1,7 +1,7 @@
 #ifndef CSTSTRUTIL_H_INCLUDED
 #define CSTSTRUTIL_H_INCLUDED
 
-void concatDouble(char* str, double dbl);
+void concatDouble(char* str, double dbl, unsigned char precision);
 
 void concatInt(char* str, int i, unsigned int base);
 
