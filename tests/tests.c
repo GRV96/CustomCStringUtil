@@ -13,15 +13,17 @@ void testAll()
 
 void concatDoubleTest()
 {
-    /*
     char dblStr1[] = "num";
-    concatDouble(dblStr1, 23.19);
-    //assert(strcmp(dblStr1, "num23.190000") == 0);
+    concatDouble(dblStr1, 23.191311, 4);
+    assert(strcmp(dblStr1, "num23.1913") == 0);
 
     char dblStr2[] = "num";
-    concatDouble(dblStr2, 92617.235801643);
-    //assert(strcmp(dblStr2, "num92617.235801643") > 0);
-    //*/
+    concatDouble(dblStr2, 874.2015, 0);
+    assert(strcmp(dblStr2, "num874") == 0);
+
+    char dblStr3[] = "num";
+    concatDouble(dblStr3, 92617.2358016437, 7);
+    assert(strcmp(dblStr3, "num92617.2358016437") > 0);
 }
 
 void concatIntTest()

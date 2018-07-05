@@ -1,5 +1,4 @@
 #include <float.h>
-#include <stdio.h>
 #include <string.h>
 
 #define DIGITS_IN_INT 5
@@ -16,9 +15,12 @@ void concatDouble(char* str, double dbl, unsigned char precision)
     sprintf(dblString, "%f", toConcat);
 
     char* pointPointer = strchr(dblString, '.');
-    unsigned char ppLengt = strlen(pointPointer);
 
-    if(precision < ppLengt)
+    if(precision == 0)
+    {
+        pointPointer[0] = '\0';
+    }
+    else if(precision < strlen(pointPointer))
     {
         pointPointer[precision+1] = '\0';
     }
