@@ -28,6 +28,10 @@ void concatDoubleTest()
     char dblStr3[17] = "num";
     concatDouble(dblStr3, 92617.2358016437, 7);
     assert(strcmp(dblStr3, "num92617.2358016") > 0);
+
+    char dblStr4[11] = "num";
+    concatDouble(dblStr4, 47.21, 4);
+    assert(strcmp(dblStr4, "num47.2100") == 0);
 }
 
 void concatIntTest()

@@ -62,11 +62,18 @@ int main()
     newLine();
     newLine();
 
-    printf("Test 3.3: concatenating a double with excessive precision\n");
+    printf("Test 3.3: concatenating a double with too great precision\n");
     char dblStr3[17] = "num";
     concatDouble(dblStr3, 92617.2358016437, 8);
     // Some precision is lost in the rounding performed by concatDouble.
     printf("Number string: %s.", dblStr3);
+    newLine();
+    newLine();
+
+    printf("Test 3.4: concatenating a double with excessive precision\n");
+    char dblStr4[11] = "num";
+    concatDouble(dblStr4, 47.21, 4);
+    printf("Number string: %s.", dblStr4);
     newLine();
     newLine();
 
