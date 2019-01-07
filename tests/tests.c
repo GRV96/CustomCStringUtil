@@ -5,7 +5,7 @@
 
 void testAll()
 {
-    //concatDoubleTest();
+    concatDoubleTest();
     concatIntTest();
     emptyingTest();
     extractStrTest();
@@ -13,17 +13,25 @@ void testAll()
 
 void concatDoubleTest()
 {
-    char dblStr1[] = "num";
+    printf("concatDoubleTest");
+    //*
+    char dblStr1[11] = "num";
     concatDouble(dblStr1, 23.191311, 4);
+    printf("\nTested string: %s", dblStr1);
     assert(strcmp(dblStr1, "num23.1913") == 0);
+    //*/
 
-    char dblStr2[] = "num";
+    char dblStr2[7] = "num";
     concatDouble(dblStr2, 874.2015, 0);
+    printf("\nTested string: %s", dblStr2);
     assert(strcmp(dblStr2, "num874") == 0);
 
-    char dblStr3[] = "num";
+    char dblStr3[17] = "num";
     concatDouble(dblStr3, 92617.2358016437, 7);
-    assert(strcmp(dblStr3, "num92617.2358016437") > 0);
+    printf("\nTested string: %s\n", dblStr3);
+    assert(strcmp(dblStr3, "num92617.235802") == 0);
+
+    printf("\n");
 }
 
 void concatIntTest()
