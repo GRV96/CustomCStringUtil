@@ -21,58 +21,58 @@ int main()
     newLine();
 
     printf("Test 2.1: concatenating an integer, base 10\n");
-    char intStr1[] = "num";
+    char intStr1[9] = "num";
     concatInt(intStr1, 48127, 10);
     printf("Number string: %s.", intStr1);
     newLine();
     newLine();
 
     printf("Test 2.2: concatenating an integer, base 2\n");
-    char intStr2[] = "num";
+    char intStr2[10] = "num";
     concatInt(intStr2, 34, 2);
     printf("Number string: %s.", intStr2);
     newLine();
     newLine();
 
     printf("Test 2.3: concatenating an integer, base 8\n");
-    char intStr3[] = "num";
+    char intStr3[6] = "num";
     concatInt(intStr3, 12, 8);
     printf("Number string: %s.", intStr3);
     newLine();
     newLine();
 
     printf("Test 2.4: concatenating an integer, base 16\n");
-    char intStr4[] = "num";
+    char intStr4[6] = "num";
     concatInt(intStr4, 29, 16);
     printf("Number string: %s.", intStr4);
     newLine();
     newLine();
 
     printf("Test 3.1: concatenating a double\n");
-    char dblStr1[] = "num";
+    char dblStr1[10] = "num";
     concatDouble(dblStr1, 23.1917, 3);
     printf("Number string: %s.", dblStr1);
     newLine();
     newLine();
 
     printf("Test 3.2: concatenating a double as an integer\n");
-    char dblStr2[] = "num";
+    char dblStr2[7] = "num";
     concatDouble(dblStr2, 874.2015, 0);
     printf("Number string: %s.", dblStr2);
     newLine();
     newLine();
 
     printf("Test 3.3: concatenating a double with excessive precision\n");
-    char dblStr3[] = "num";
+    char dblStr3[17] = "num";
     concatDouble(dblStr3, 92617.2358016437, 8);
+    // Some precision is lost in the rounding performed by concatDouble.
     printf("Number string: %s.", dblStr3);
     newLine();
     newLine();
 
     printf("Test 4.1: removing characters from a string\n");
     char preRemoval1[] = "0123456";
-    char postRemoval1[4];
-    //char* postRemoval1;
+    char postRemoval1[5];
     removeChars(postRemoval1, preRemoval1, 2, 5);
     printf("Original string: %s.", preRemoval1);
     newLine();
@@ -81,8 +81,7 @@ int main()
     newLine();
 
     printf("Test 4.2: removing characters with inverted indices\n");
-    char postRemoval2[4];
-    //char* postRemoval2;
+    char postRemoval2[5];
     removeChars(postRemoval2, preRemoval1, 5, 2);
     printf("Original string: %s.", preRemoval1);
     newLine();
@@ -91,8 +90,7 @@ int main()
     newLine();
 
     printf("Test 4.3: removing all characters\n");
-    char postRemoval3[4];
-    //char* postRemoval3 = NULL;
+    char postRemoval3[5];
     removeChars(postRemoval3, preRemoval1, 0, 7);
     printf("Original string: %s.", preRemoval1);
     newLine();
@@ -102,7 +100,6 @@ int main()
 
     printf("Test 4.4: removal with end index beyond the limit\n");
     char postRemoval4[4];
-    //char* postRemoval4 = NULL;
     removeChars(postRemoval4, preRemoval1, 3, 13);
     printf("Original string: %s.", preRemoval1);
     newLine();
@@ -111,11 +108,7 @@ int main()
     newLine();
 
     printf("Test 4.5: removal with start index beyond the limit\n");
-    //char postRemoval5[4];
-    //char postRemoval5[6];
-    char postRemoval5[10];
-    //char postRemoval5[20];
-    //char* postRemoval5;
+    char postRemoval5[7];
     removeChars(postRemoval5, preRemoval1, 12, 18);
     printf("Original string: %s.", preRemoval1);
     newLine();
@@ -123,17 +116,7 @@ int main()
     newLine();
     newLine();
 
-    printf("Tests finished\n");
-
-    /*/ Based on https://openclassrooms.com/courses/19980-apprenez-a-programmer-en-c/15765-les-chaines-de-caracteres
-    printf("Char* test\n");
-    char chaine[] = "Texte";
-    char copie[100] = {0};
-    //char* copie;
-    strcpy(copie, chaine); // On copie "chaine" dans "copie"
-    printf("chaine vaut: %s\n", chaine);
-    printf("copie vaut: %s\n", copie);
-    //*/
+    printf("Console tests finished\n");
 
     return 0;
 }
