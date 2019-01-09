@@ -9,6 +9,7 @@ void testAll()
     concatIntTest();
     emptyingTest();
     extractStrTest();
+    removingCharsTest();
 }
 
 void concatDoubleTest()
@@ -75,7 +76,15 @@ void extractStrTest()
     char str1[] = "aLongString";
     char str2[5];
     extractStr(str2, str1, 1, 4);
-
     assert(strcmp(str1, "aLongString") == 0);
     assert(strcmp(str2, "Long") == 0);
+}
+
+void removingCharsTest()
+{
+    char str1[] = "aLongString";
+    char str2[8];
+    removeChars(str2, str1, 1, 5);
+    assert(strcmp(str1, "aLongString") == 0);
+    assert(strcmp(str2, "aString") == 0);
 }
