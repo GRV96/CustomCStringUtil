@@ -5,11 +5,22 @@
 #include "tests/tests.h"
 
 void newLine();
+void performConsoleTests();
 
 int main()
 {
     testAll();
+    performConsoleTests();
+    return EXIT_SUCCESS;
+}
 
+void newLine()
+{
+    printf("\n");
+}
+
+void performConsoleTests()
+{
     printf("Test 1: substring with extractStr()\n");
     char str1[] = "aLongString";
     char str2[5];
@@ -124,11 +135,4 @@ int main()
     newLine();
 
     printf("Console tests finished\n");
-
-    return 0;
-}
-
-void newLine()
-{
-    printf("\n");
 }
