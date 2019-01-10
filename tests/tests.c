@@ -9,6 +9,7 @@ void testAll()
     concatIntTest();
     emptyingTest();
     extractStrTest();
+    insertStrTest();
     removingCharsTest();
 }
 
@@ -78,6 +79,17 @@ void extractStrTest()
     extractStr(str2, str1, 1, 4);
     assert(strcmp(str1, "aLongString") == 0);
     assert(strcmp(str2, "Long") == 0);
+}
+
+void insertStrTest()
+{
+    char str1[] = "abcghi";
+    char str2[] = "def";
+    char insertionResult[10];
+    insertStr(insertionResult, str1, str2, 3);
+    assert(strcmp(str1, "abcghi") == 0);
+    assert(strcmp(str2, "def") == 0);
+    assert(strcmp(insertionResult, "abcdefghi") == 0);
 }
 
 void removingCharsTest()
