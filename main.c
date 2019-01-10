@@ -134,5 +134,16 @@ void performConsoleTests()
     newLine();
     newLine();
 
+    printf("Test 5: string insertion\n");
+    char receiver[] = "OneThree";
+    char strToInsert[] = "Two";
+    char insertionResult[12];
+    printf("Receiving string: %s.\n", receiver);
+    printf("String to insert: %s.\n", strToInsert);
+    insertStr(insertionResult, receiver, strToInsert, 3);
+    printf("Result of the insertion: %s.", insertionResult);
+    newLine();
+    newLine();
+
     printf("Console tests finished\n");
 }

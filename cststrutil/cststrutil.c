@@ -55,6 +55,26 @@ void extractStr(char* receiver, const char* source, unsigned int position, unsig
     receiver[i] = '\0';
 }
 
+void insertStr(char* output, const char* receiver, const char* strToInsert, unsigned int position)
+{
+    for(unsigned int i=0; i<position; i++)
+    {
+        output[i] = receiver[i];
+    }
+    output[position] = '\0';
+    strcat(output, strToInsert);
+    unsigned int posInReceiver = position;
+    unsigned int posInOutput = position + strlen(strToInsert);
+    while(receiver[posInReceiver] != '\0')
+    {
+        output[posInOutput] = receiver[posInReceiver];
+        printf("receiver[%d]: %c\n", posInReceiver, receiver[posInReceiver]);
+        posInReceiver++;
+        posInOutput++;
+    }
+    printf("receiver[%d]: %c\n", posInReceiver, receiver[posInReceiver]);
+}
+
 void makeEmpty(char* str)
 {
     unsigned int charNb = strlen(str);
