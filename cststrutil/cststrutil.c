@@ -68,11 +68,10 @@ void insertStr(char* output, const char* receiver, const char* strToInsert, unsi
     while(receiver[posInReceiver] != '\0')
     {
         output[posInOutput] = receiver[posInReceiver];
-        printf("receiver[%d]: %c\n", posInReceiver, receiver[posInReceiver]);
         posInReceiver++;
         posInOutput++;
     }
-    printf("receiver[%d]: %c\n", posInReceiver, receiver[posInReceiver]);
+    output[posInOutput] = '\0';
 }
 
 void makeEmpty(char* str)
