@@ -70,8 +70,8 @@ void concatIntTest()
 void convertCharToDigitTest()
 {
     assert(convertCharToDigit('0'-1) == -1);
-    assert(convertCharToDigit('0') == '0' - DIGIT_TO_CHAR_CONVERSION);
-    assert(convertCharToDigit('9') == '9' - DIGIT_TO_CHAR_CONVERSION);
+    assert(convertCharToDigit('0') == 0);
+    assert(convertCharToDigit('9') == 9);
     assert(convertCharToDigit('9'+1) == -1);
 }
 

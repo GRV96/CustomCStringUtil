@@ -1,8 +1,6 @@
 #ifndef CSTSTRUTIL_H_INCLUDED
 #define CSTSTRUTIL_H_INCLUDED
 
-#define DIGIT_TO_CHAR_CONVERSION 48
-
 void concatDouble(char* str, double dbl, unsigned char precision);
 void concatInt(char* str, int i, unsigned int base);
 int convertCharToDigit(char c);
