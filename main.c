@@ -145,5 +145,19 @@ void performConsoleTests()
     newLine();
     newLine();
 
+    printf("Test 6.1: converting a character to a digit\n");
+    char charForTest6 = '4';
+    int digitForTest6 = convertCharToDigit(charForTest6);
+    printf("Character to convert: %c\n", charForTest6);
+    printf("Conversion result: %d\n", digitForTest6);
+    newLine();
+
+    printf("Test 6.2: converting a digit to a character\n");
+    digitForTest6 = 7;
+    charForTest6 = convertDigitToChar(digitForTest6);
+    printf("Digit to convert: %c\n", digitForTest6);
+    printf("Conversion result: %d\n", charForTest6);
+    newLine();
+
     printf("Console tests finished\n");
 }

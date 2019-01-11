@@ -2,7 +2,6 @@
 #include <string.h>
 
 #define DIGITS_IN_INT 5
-#define DIGIT_TO_CHAR_CONVERSION 48
 
 #include "cststrutil.h"
 

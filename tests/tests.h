@@ -4,6 +4,8 @@
 void testAll();
 void concatDoubleTest();
 void concatIntTest();
+void convertCharToDigitTest();
+void convertDigitToCharTest();
 void emptyingTest();
 void extractStrTest();
 void insertStrTest();

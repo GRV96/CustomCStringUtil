@@ -7,6 +7,8 @@ void testAll()
 {
     concatDoubleTest();
     concatIntTest();
+    convertCharToDigitTest();
+    convertDigitToCharTest();
     emptyingTest();
     extractStrTest();
     insertStrTest();
@@ -63,6 +65,22 @@ void concatIntTest()
     unsigned char uc6 = 147;
     concatInt(intStr6, uc6, 10);
     assert(strcmp(intStr6, "num147") == 0);
+}
+
+void convertCharToDigitTest()
+{
+    assert(convertCharToDigit('0'-1) == -1);
+    assert(convertCharToDigit('0') == '0' - DIGIT_TO_CHAR_CONVERSION);
+    assert(convertCharToDigit('9') == '9' - DIGIT_TO_CHAR_CONVERSION);
+    assert(convertCharToDigit('9'+1) == -1);
+}
+
+void convertDigitToCharTest()
+{
+    assert(convertDigitToChar(-1) == '\0');
+    assert(convertDigitToChar(0) == '0');
+    assert(convertDigitToChar(9) == '9');
+    assert(convertDigitToChar(10) == '\0');
 }
 
 void emptyingTest()
