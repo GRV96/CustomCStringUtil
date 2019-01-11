@@ -155,8 +155,8 @@ void performConsoleTests()
     printf("Test 6.2: converting a digit to a character\n");
     digitForTest6 = 7;
     charForTest6 = convertDigitToChar(digitForTest6);
-    printf("Digit to convert: %c\n", digitForTest6);
-    printf("Conversion result: %d\n", charForTest6);
+    printf("Digit to convert: %d\n", digitForTest6);
+    printf("Conversion result: %c\n", charForTest6);
     newLine();
 
     printf("Console tests finished\n");
