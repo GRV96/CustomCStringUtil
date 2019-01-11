@@ -2,6 +2,7 @@
 #include <string.h>
 
 #define DIGITS_IN_INT 5
+#define DIGIT_TO_CHAR_CONVERSION 48
 
 #include "cststrutil.h"
 
@@ -33,6 +34,32 @@ void concatInt(char* str, int integer, unsigned int base)
     char intString[DIGITS_IN_INT+1];
     itoa(integer, intString, base);
     strcat(str, intString);
+}
+
+int convertCharToDigit(char c)
+{
+    // c must be in the range of digits.
+    if(48 <= c && c <= 57)
+    {
+        return c - DIGIT_TO_CHAR_CONVERSION;
+    }
+    else
+    {
+        return -1;
+    }
+}
+
+char convertDigitToChar(int i)
+{
+    // i must be a number of one digit.
+    if(0 <= i && i <= 9)
+    {
+        return i + DIGIT_TO_CHAR_CONVERSION;
+    }
+    else
+    {
+        return '\0';
+    }
 }
 
 void extractStr(char* receiver, const char* source, unsigned int position, unsigned int length)

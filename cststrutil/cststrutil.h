@@ -3,6 +3,8 @@
 
 void concatDouble(char* str, double dbl, unsigned char precision);
 void concatInt(char* str, int i, unsigned int base);
+int convertCharToDigit(char c);
+char convertDigitToChar(int i);
 void extractStr(char* receiver, const char* source, unsigned int position, unsigned int length);
 void insertStr(char* output, const char* receiver, const char* strToInsert, unsigned int position);
 void makeEmpty(char* str);
