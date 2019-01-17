@@ -1,2 +1,2 @@
 # CustomCStringUtil
-A set of custom functions to manipulate char arrays in C
+A set of custom functions to manipulate character arrays in C
