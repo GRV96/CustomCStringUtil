@@ -41,8 +41,8 @@ void concatDoubleTest()
 void concatIntTest()
 {
     char intStr1[9] = "num";
-    concatInt(intStr1, 48127, 10);
-    assert(strcmp(intStr1, "num48127") == 0);
+    concatInt(intStr1, -48127, 10);
+    assert(strcmp(intStr1, "num-48127") == 0);
 
     char intStr2[10] = "num";
     concatInt(intStr2, 34, 2);
@@ -53,8 +53,8 @@ void concatIntTest()
     assert(strcmp(intStr3, "num14") == 0);
 
     char intStr4[6] = "num";
-    concatInt(intStr4, 29, 16);
-    assert(strcmp(intStr4, "num1d") == 0);
+    concatInt(intStr4, -29, 16);
+    assert(strcmp(intStr4, "num-1d") == 0);
 
     char intStr5[7] = "num";
     char c5 = 109;

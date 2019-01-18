@@ -31,8 +31,20 @@ void concatDouble(char* str, double dbl, unsigned char precision)
 
 void concatInt(char* str, int integer, unsigned int base)
 {
-    char intString[DIGITS_IN_INT+1];
-    itoa(integer, intString, base);
+    char intString[DIGITS_IN_INT+2];
+    if(integer < 0 && base != 10)
+    {
+        integer *= -1;
+        char uIntString[DIGITS_IN_INT+1];
+        itoa(integer, uIntString, base);
+        intString[0] = '-';
+        intString[1] = '\0';
+        strcat(intString, uIntString);
+    }
+    else
+    {
+        itoa(integer, intString, base);
+    }
     strcat(str, intString);
 }
 

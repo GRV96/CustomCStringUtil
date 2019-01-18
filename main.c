@@ -33,7 +33,7 @@ void performConsoleTests()
 
     printf("Test 2.1: concatenating an integer, base 10\n");
     char intStr1[9] = "num";
-    concatInt(intStr1, 48127, 10);
+    concatInt(intStr1, -48127, 10);
     printf("Number string: %s.", intStr1);
     newLine();
     newLine();
@@ -47,7 +47,7 @@ void performConsoleTests()
 
     printf("Test 2.3: concatenating an integer, base 8\n");
     char intStr3[6] = "num";
-    concatInt(intStr3, 12, 8);
+    concatInt(intStr3, -12, 8);
     printf("Number string: %s.", intStr3);
     newLine();
     newLine();
