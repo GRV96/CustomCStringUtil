@@ -1,4 +1,3 @@
-#include <float.h>
 #include <string.h>
 
 #define DIGITS_IN_INT 5
@@ -12,7 +11,7 @@ void concatDouble(char* str, double dbl, unsigned char precision)
     toConcat = round(toConcat);
     toConcat /= pow(10.0, precision);
 
-    char dblString[DBL_DIG+1]; // DBL_DIG from float.h = 15
+    char dblString[40] = "";
     sprintf(dblString, "%lf", toConcat);
 
     char* pointPointer = strchr(dblString, '.');
