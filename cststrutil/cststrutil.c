@@ -1,6 +1,5 @@
 #include <string.h>
 
-#define DIGITS_IN_INT 5
 #define DIGIT_TO_CHAR_CONVERSION 48
 
 #include "cststrutil.h"
@@ -30,11 +29,14 @@ void concatDouble(char* str, double dbl, unsigned char precision)
 
 void concatInt(char* str, int integer, unsigned int base)
 {
-    char intString[DIGITS_IN_INT+2];
+    // An int contains <=10 digits.
+    // +1 digit for the - sign
+    // +1 digit for '\0'
+    char intString[12];
     if(integer < 0 && base != 10)
     {
         integer *= -1;
-        char uIntString[DIGITS_IN_INT+1];
+        char uIntString[11]; // For an unsigned int
         itoa(integer, uIntString, base);
         intString[0] = '-';
         intString[1] = '\0';
