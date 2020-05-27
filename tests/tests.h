@@ -8,6 +8,7 @@ void convertCharToDigitTest();
 void convertDigitToCharTest();
 void emptyingTest();
 void extractStrTest();
+void indexOfTest();
 void insertStrTest();
 void removingCharsTest();
 

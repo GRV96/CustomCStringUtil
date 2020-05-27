@@ -1,8 +1,7 @@
 #include <string.h>
+#include "cststrutil.h"
 
 #define DIGIT_TO_CHAR_CONVERSION 48
-
-#include "cststrutil.h"
 
 void concatDouble(char* str, double dbl, unsigned char precision)
 {
@@ -93,6 +92,16 @@ void extractStr(char* receiver, const char* source, unsigned int position, unsig
     }
 
     receiver[i] = '\0';
+}
+
+int indexOfChar(const char* source, char toFind)
+{
+    char* toFindPtr = strchr(source, toFind);
+    if(toFindPtr == NULL)
+    {
+        return -1;
+    }
+    return (int) (toFindPtr - source);
 }
 
 void insertStr(char* output, const char* receiver, const char* strToInsert, unsigned int position)

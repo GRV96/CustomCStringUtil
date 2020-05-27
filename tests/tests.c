@@ -11,6 +11,7 @@ void testAll()
     convertDigitToCharTest();
     emptyingTest();
     extractStrTest();
+    indexOfTest();
     insertStrTest();
     removingCharsTest();
 }
@@ -97,6 +98,13 @@ void extractStrTest()
     extractStr(str2, str1, 1, 4);
     assert(strcmp(str1, "aLongString") == 0);
     assert(strcmp(str2, "Long") == 0);
+}
+
+void indexOfTest()
+{
+    char someStr[] = "qwertyuiop";
+    assert(indexOfChar(someStr, 'x') == -1);
+    assert(indexOfChar(someStr, 'y') == 5);
 }
 
 void insertStrTest()
